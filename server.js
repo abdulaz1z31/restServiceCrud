@@ -3,11 +3,12 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import {userRouter, taskRouter} from "./routes/index.routes.js"
 
-const port = process.env.PORT || 3000;
-const db_url = process.env.DATABASE_URI
-
 dotenv.config();
 const app = express();
+
+const port = process.env.PORT;
+const db_url = process.env.DATABASE_URI
+console.log(port, db_url);
 
 app.use(express.json());
 
